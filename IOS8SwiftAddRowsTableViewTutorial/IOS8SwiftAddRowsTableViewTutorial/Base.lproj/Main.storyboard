@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A388b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="S3Q-J5-Jjq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="S3Q-J5-Jjq">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Cars-->
@@ -49,8 +50,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EI3-au-fUc">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EI3-au-fUc">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="750" constant="44" id="rg3-oF-ufu"/>
+                                </constraints>
                                 <items>
                                     <navigationItem title="Add Car" id="M5Z-6F-Qcg">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="zl7-5d-m0s">
@@ -66,13 +70,25 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fdN-Yp-R0T">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fdN-Yp-R0T">
                                 <rect key="frame" x="16" y="108" width="288" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Jq0-Sz-GtE"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fdN-Yp-R0T" firstAttribute="trailing" secondItem="L7k-1l-Xcf" secondAttribute="trailingMargin" id="3HJ-a5-t6Q"/>
+                            <constraint firstItem="fdN-Yp-R0T" firstAttribute="top" secondItem="EI3-au-fUc" secondAttribute="bottom" constant="64" id="4yl-QU-7gk"/>
+                            <constraint firstItem="fdN-Yp-R0T" firstAttribute="leading" secondItem="L7k-1l-Xcf" secondAttribute="leadingMargin" id="U8I-l1-a0S"/>
+                            <constraint firstAttribute="centerY" secondItem="fdN-Yp-R0T" secondAttribute="centerY" constant="161" id="eoW-Ed-5WC"/>
+                            <constraint firstItem="EI3-au-fUc" firstAttribute="top" secondItem="L7k-1l-Xcf" secondAttribute="top" id="eqF-Vg-6mJ"/>
+                            <constraint firstAttribute="trailing" secondItem="EI3-au-fUc" secondAttribute="trailing" id="mw4-mU-YNc"/>
+                            <constraint firstItem="EI3-au-fUc" firstAttribute="leading" secondItem="L7k-1l-Xcf" secondAttribute="leading" id="s1Z-e1-Df8"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="carName" destination="fdN-Yp-R0T" id="5rc-9H-cEw"/>
